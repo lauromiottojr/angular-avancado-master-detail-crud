@@ -64,7 +64,7 @@ export class EntryService {
   }
 
   private jsonDataToEntry(jsonData: any): Entry{
-  	return jsonData as Entry;
+    return Object.assign(new Entry(), jsonData);
   }
 
   private hanbleError(error: any): Observable<any>{
