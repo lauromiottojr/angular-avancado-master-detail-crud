@@ -4,8 +4,12 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\pages",
-    "\\src\\app\\pages\\categories"
+    "\\src\\app\\pages\\categories",
+    "\\src\\app\\pages\\categories\\category-form",
+    "\\src\\app\\pages\\entries",
+    "\\src\\app\\pages\\entries\\entry-form",
+    "\\src\\app\\pages\\entries\\shared"
   ],
-  "SelectedNode": "\\src\\app\\app-routing.module.ts",
+  "SelectedNode": "\\src\\app\\pages\\categories\\category-form\\category-form.component.html",
   "PreviewInSolutionExplorer": false
 }
