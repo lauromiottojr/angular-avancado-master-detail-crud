@@ -3,13 +3,13 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\core",
+    "\\src\\app\\core\\components",
     "\\src\\app\\pages",
     "\\src\\app\\pages\\categories",
-    "\\src\\app\\pages\\categories\\category-form",
     "\\src\\app\\pages\\entries",
-    "\\src\\app\\pages\\entries\\entry-form",
-    "\\src\\app\\pages\\entries\\shared"
+    "\\src\\app\\shared"
   ],
-  "SelectedNode": "\\src\\app\\pages\\categories\\category-form\\category-form.component.html",
+  "SelectedNode": "\\src\\app\\pages\\categories\\categories.module.ts",
   "PreviewInSolutionExplorer": false
 }
