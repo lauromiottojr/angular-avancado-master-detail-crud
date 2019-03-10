@@ -12,46 +12,47 @@ export abstract class BaseResourceService<T extends BaseResourceModel> {
 
   constructor(
     protected apiPath: string,
-    protected injector: Injector
+    protected injector: Injector,
+    protected jsonDataToResourceFn: (jsonData: any) => T
   ) {
     this.http = injector.get(HttpClient);
   }
 
   getAll(): Observable<T[]> { 			//RETORNA UM ARRAY DO OBJ CATEGORIA
     return this.http.get(this.apiPath).pipe(
-      catchError(this.hanbleError),
-      map(this.jsonDataToResources)
+      map(this.jsonDataToResources.bind(this)),
+      catchError(this.hanbleError)
     )
   }
 
   getById(id: Number): Observable<T> {
     const url = `${this.apiPath}/${id}`;
     return this.http.get(url).pipe(
-      catchError(this.hanbleError),
-      map(this.jsonDataToResource)
+      map(this.jsonDataToResource.bind(this)),
+      catchError(this.hanbleError)
     )
   }
 
   create(resource: T): Observable<T> {
     return this.http.post(this.apiPath, resource).pipe(
-      catchError(this.hanbleError),
-      map(this.jsonDataToResource)
+      map(this.jsonDataToResource.bind(this)),
+      catchError(this.hanbleError)
     )
   }
 
   update(resource: T): Observable<T> {
     const url = `${this.apiPath}/${resource.id}`;
     return this.http.put(url, resource).pipe(
-      catchError(this.hanbleError),
-      map(() => resource)
+      map(() => resource),
+      catchError(this.hanbleError)
     )
   }
 
   delete(id: number): Observable<any> {
     const url = `${this.apiPath}/${id}`;
     return this.http.delete(url).pipe(
-      catchError(this.hanbleError),
-      map(() => null)
+      map(() => null),
+      catchError(this.hanbleError)
     )
   }
 
@@ -59,12 +60,12 @@ export abstract class BaseResourceService<T extends BaseResourceModel> {
 
   protected jsonDataToResources(jsonData: any[]): T[] {
     const resources: T[] = [];
-    jsonData.forEach(element => resources.push(element as T));
+    jsonData.forEach(element => resources.push(this.jsonDataToResourceFn(element)));
     return resources;
   }
 
   protected jsonDataToResource(jsonData: any): T {
-    return jsonData as T;
+    return this.jsonDataToResourceFn(jsonData);
   }
 
   protected hanbleError(error: any): Observable<any> {
