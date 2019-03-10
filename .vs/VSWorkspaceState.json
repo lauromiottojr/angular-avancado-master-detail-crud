@@ -3,15 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\core\\components",
     "\\src\\app\\pages",
     "\\src\\app\\pages\\categories",
     "\\src\\app\\pages\\categories\\shared",
     "\\src\\app\\pages\\entries",
-    "\\src\\app\\pages\\entries\\shared",
     "\\src\\app\\shared",
+    "\\src\\app\\shared\\models",
     "\\src\\app\\shared\\services"
   ],
-  "SelectedNode": "\\src\\app\\shared\\services\\base-resource.service.ts",
+  "SelectedNode": "\\src\\app\\pages\\categories\\shared\\category.service.ts",
   "PreviewInSolutionExplorer": false
 }
