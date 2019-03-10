@@ -1,74 +1,17 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-
-import { Observable, throwError } from 'rxjs';
-import { map, catchError, flatMap } from 'rxjs/operators';
+import { Injector } from '@angular/core';
 
 import { Category } from './category.model';
+
+import { BaseResourceService } from '../../../shared/services/base-resource.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CategoryService {
+export class CategoryService extends BaseResourceService<Category> {
 
-  private apiPath: string = "api/categories";
-
-  constructor(private http: HttpClient) { }
-
-  getAll(): Observable<Category[]> { 			//RETORNA UM ARRAY DO OBJ CATEGORIA
-    return this.http.get(this.apiPath).pipe(
-      catchError(this.hanbleError),
-      map(this.jsonDataToCategories)
-    )
+  constructor(protected injector: Injector) {
+    super("api/categories", injector)
   }
-
-  getById(id: Number): Observable<Category> {
-    const url = `${this.apiPath}/${id}`;
-    return this.http.get(url).pipe(
-      catchError(this.hanbleError),
-      map(this.jsonDataToCategory)
-    )
-  }
-
-  create(category: Category): Observable<Category> {
-    return this.http.post(this.apiPath, category).pipe(
-      catchError(this.hanbleError),
-      map(this.jsonDataToCategory)
-    )
-  }
-
-  update(category: Category): Observable<Category> {
-    const url = `${this.apiPath}/${category.id}`;
-    return this.http.put(url, category).pipe(
-      catchError(this.hanbleError),
-      map(() => category)
-    )
-  }
-
-  delete(id: number): Observable<any> {
-    const url = `${this.apiPath}/${id}`;
-    return this.http.delete(url).pipe(
-      catchError(this.hanbleError),
-      map(() => null)
-    )
-  }
-
-  //PRIVATE METHODS
-
-  private jsonDataToCategories(jsonData: any[]): Category[] {
-    const categories: Category[] = [];
-    jsonData.forEach(element => categories.push(element as Category));
-    return categories;
-  }
-
-  private jsonDataToCategory(jsonData: any): Category {
-    return jsonData as Category;
-  }
-
-  private hanbleError(error: any): Observable<any> {
-    console.log("ERRO NA REQUISICAO => ", error);
-    return throwError(error);
-  }
-
 
 }
