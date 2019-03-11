@@ -5,12 +5,15 @@
     "\\src\\app",
     "\\src\\app\\pages",
     "\\src\\app\\pages\\categories",
-    "\\src\\app\\pages\\categories\\shared",
+    "\\src\\app\\pages\\categories\\category-form",
     "\\src\\app\\pages\\entries",
+    "\\src\\app\\pages\\entries\\entry-form",
+    "\\src\\app\\pages\\entries\\entry-list",
+    "\\src\\app\\pages\\entries\\shared",
     "\\src\\app\\shared",
-    "\\src\\app\\shared\\models",
-    "\\src\\app\\shared\\services"
+    "\\src\\app\\shared\\components",
+    "\\src\\app\\shared\\components\\base-resource-form"
   ],
-  "SelectedNode": "\\src\\app\\pages\\categories\\shared\\category.service.ts",
+  "SelectedNode": "\\src\\app\\app-routing.module.ts",
   "PreviewInSolutionExplorer": false
 }
