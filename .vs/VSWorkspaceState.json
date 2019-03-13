@@ -8,12 +8,9 @@
     "\\src\\app\\pages\\categories\\category-form",
     "\\src\\app\\pages\\entries",
     "\\src\\app\\pages\\entries\\entry-form",
-    "\\src\\app\\pages\\entries\\entry-list",
-    "\\src\\app\\pages\\entries\\shared",
     "\\src\\app\\shared",
-    "\\src\\app\\shared\\components",
-    "\\src\\app\\shared\\components\\base-resource-form"
+    "\\src\\app\\shared\\components"
   ],
-  "SelectedNode": "\\src\\app\\app-routing.module.ts",
+  "SelectedNode": "\\src\\app\\pages\\entries\\entry-form\\entry-form.component.ts",
   "PreviewInSolutionExplorer": false
 }
