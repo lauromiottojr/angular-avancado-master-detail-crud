@@ -14,8 +14,8 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
   currentAction: string;
   resourceForm: FormGroup;
   pageTitle: string;
-  serverErrorMessages: string[] = null;
   submittingForm: boolean = false;
+  serverErrorMessages: string[] = null;
   protected route: ActivatedRoute;
   protected router: Router;
   protected formBuilder: FormBuilder;
