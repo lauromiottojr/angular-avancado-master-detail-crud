@@ -4,13 +4,15 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\pages",
-    "\\src\\app\\pages\\categories",
     "\\src\\app\\pages\\categories\\category-form",
+    "\\src\\app\\pages\\categories\\category-list",
     "\\src\\app\\pages\\entries",
     "\\src\\app\\pages\\entries\\entry-form",
+    "\\src\\app\\pages\\entries\\entry-list",
     "\\src\\app\\shared",
-    "\\src\\app\\shared\\components"
+    "\\src\\app\\shared\\components",
+    "\\src\\app\\shared\\components\\page-header"
   ],
-  "SelectedNode": "\\src\\app\\pages\\entries\\entry-form\\entry-form.component.ts",
+  "SelectedNode": "\\src\\app\\pages\\entries\\entry-form\\entry-form.component.html",
   "PreviewInSolutionExplorer": false
 }
