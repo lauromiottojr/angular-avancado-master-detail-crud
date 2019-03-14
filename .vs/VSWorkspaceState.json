@@ -3,15 +3,19 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\core",
+    "\\src\\app\\core\\components",
+    "\\src\\app\\core\\components\\navbar",
     "\\src\\app\\pages",
-    "\\src\\app\\pages\\categories",
-    "\\src\\app\\pages\\categories\\category-form",
-    "\\src\\app\\pages\\categories\\category-list",
     "\\src\\app\\pages\\entries",
-    "\\src\\app\\shared",
+    "\\src\\app\\pages\\entries\\entry-form",
+    "\\src\\app\\pages\\entries\\entry-list",
+    "\\src\\app\\pages\\entries\\shared",
     "\\src\\app\\shared\\components",
-    "\\src\\app\\shared\\components\\form-field-error"
+    "\\src\\app\\shared\\components\\base-resource-form",
+    "\\src\\app\\shared\\components\\page-header",
+    "\\src\\app\\shared\\components\\server-error-messages"
   ],
-  "SelectedNode": "\\src\\app\\pages\\entries\\entry-form\\entry-form.component.html",
+  "SelectedNode": "\\src\\app\\core\\core.module.ts",
   "PreviewInSolutionExplorer": false
 }
