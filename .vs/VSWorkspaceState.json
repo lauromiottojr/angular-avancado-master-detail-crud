@@ -6,11 +6,11 @@
     "\\src\\app\\core",
     "\\src\\app\\core\\components",
     "\\src\\app\\pages",
-    "\\src\\app\\pages\\categories",
-    "\\src\\app\\pages\\categories\\category-list",
-    "\\src\\app\\pages\\reports",
-    "\\src\\app\\pages\\reports\\reports"
+    "\\src\\app\\pages\\entries",
+    "\\src\\app\\pages\\entries\\shared",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\components"
   ],
-  "SelectedNode": "\\src\\app\\pages\\reports\\reports\\reports.component.html",
+  "SelectedNode": "\\src\\app\\app-routing.module.ts",
   "PreviewInSolutionExplorer": false
 }
